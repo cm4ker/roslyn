@@ -4,6 +4,7 @@
   <PropertyGroup>
     <OutputType>Library</OutputType>
     <RootNamespace>Microsoft.CodeAnalysis</RootNamespace>
+    <AssemblyName>Aquila.Microsoft.CodeAnalysis</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <DefineConstants>$(DefineConstants);COMPILERCORE</DefineConstants>
@@ -14,12 +15,23 @@
     
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>Microsoft.CodeAnalysis.Common</PackageId>
+    <PackageId>Aquila.Microsoft.CodeAnalysis</PackageId>
     <PackageDescription>
       A shared package used by the Microsoft .NET Compiler Platform ("Roslyn").
       Do not install this package manually, it will be added as a prerequisite by other packages that require it.
     </PackageDescription>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageVersion>0.0.1</PackageVersion>
+    <Authors>Microsoft, Peachpie, Jakub Misek, Robert Husak</Authors>
+    <Description>Roslyn CodeAnalysis slightly modified to be used by Peachpie.</Description>
+    <PackageTags>php;peachpie;dotnet;compiler;roslyn</PackageTags>
+    <RepositoryUrl>https://github.com/iolevel/Peachpie.Microsoft.CodeAnalysis</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/iolevel/Peachpie.Microsoft.CodeAnalysis</PackageProjectUrl>
+    <SignPeachpie>true</SignPeachpie>
+  </PropertyGroup>
+  
   <ItemGroup>
     <None Include="Operations\OperationInterfaces.xml" />
   </ItemGroup>
