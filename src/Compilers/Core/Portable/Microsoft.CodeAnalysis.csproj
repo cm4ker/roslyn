@@ -11,14 +11,18 @@
     <NoStdLib>true</NoStdLib>
     <ApplyNgenOptimization Condition="'$(TargetFramework)' == 'netstandard2.0'">partial</ApplyNgenOptimization>
     <GeneratePerformanceSensitiveAttribute>true</GeneratePerformanceSensitiveAttribute>
-    
+
     <!-- NuGet -->
     <IsPackable>true</IsPackable>
-    <PackageId>Microsoft.CodeAnalysis.Common</PackageId>
-    <PackageDescription>
-      A shared package used by the Microsoft .NET Compiler Platform ("Roslyn").
-      Do not install this package manually, it will be added as a prerequisite by other packages that require it.
-    </PackageDescription>
+    <PackageId>Aquila.Microsoft.CodeAnalysis</PackageId>
+    <PackageVersion>3.7.0</PackageVersion>
+    <Authors>Microsoft</Authors>
+    <Description>Roslyn CodeAnalysis slightly modified to be used by Peachpie.</Description>
+    <PackageTags>aquila;dotnet;compiler;roslyn</PackageTags>
+    
+    <!-- Strong name -->
+    <AssemblyVersion>$(PackageVersion).0</AssemblyVersion>
+    <StrongNameKeyId>Open</StrongNameKeyId>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Operations\OperationInterfaces.xml" />
